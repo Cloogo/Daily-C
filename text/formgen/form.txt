@@ -1,0 +1,10 @@
+Hello,welcome to c programming home.
+Name  :$0
+Age   :$1
+Career:$2
+Phone :$5
+Addr  :$3
+Company:$4
+Mail   :$6
+Good luck,$0.
+We have already sent an email to $6.Remmember to check whether you are free on this site.
