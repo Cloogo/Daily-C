@@ -109,6 +109,7 @@ fetch(char* url){
 #endif
     }
     memset(&s_addr,0,sizeof(s_addr));
+    //gdb.
     memcpy((char*)&s_addr.sin_addr.s_addr,(char*)hostinfo->h_addr,hostinfo->h_length);
 #ifdef DEBUG
     printf("dest ip:%s\n",inet_ntoa(s_addr.sin_addr));
