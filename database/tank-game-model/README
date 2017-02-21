@@ -1,0 +1,14 @@
+My first attempt to writing a small game server running on LAN used tcp and mysql.
+However,when developping the client,i find something terrible happends.
+Without the function of broadcast,i have to use polling method to 
+dectect the changes,causing the overhead of cpu.
+The scheme to fix it is to keep the socket of
+the clients.
+Another problem is that the protocal between server and client is unreliable.
+Some packets may
+be sent separatedly ,however,read in sever togother,causing the undefine actions in server.
+The solution to solve this problem is to apply upd instead of tcp.And try to reconstruct the
+data.
+As for how to test the server?
+Oh,my god!How terrible the server!
+It's of fun.I need more knowledge.
