@@ -23,7 +23,7 @@ main(){
     }
     printf("Num larger than 100:\n");
     struct Previous p={.val=100};
-    struct Validator v2=Validator_new_prev(&p);
+    struct Validator v2=Validator_new_greater(&p);
     struct Stack s2=Stack_new_with_validator(buf,&v2);
     for(int i=0;i<100;i++){
         e=rand()%0xfff;

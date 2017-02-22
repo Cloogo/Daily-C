@@ -8,7 +8,7 @@ extern "C"{
 typedef struct Validator* Validator;
 
 struct Validator{
-    bool (* const validate)(Validator self,void* val);
+    bool (* const validate)(Validator self,const void* val);
     void* const data;
 };
 
@@ -21,7 +21,7 @@ typedef struct Previous{
     int val;
 }Previous;
 
-extern bool int_rang(const Validator self,const void* val);
+extern bool int_rang(Validator self,const void* val);
 extern bool int_smaller(Validator self,const void* val);
 extern bool int_greater(Validator self,const void* val);
 
