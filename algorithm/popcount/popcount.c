@@ -4,10 +4,10 @@
 typedef unsigned long long int uint64;
 typedef unsigned char uint8;
 
-int pc[256]={0};
+uint8 pc[256]={0};
 
-int popcount(uint64 n);
-int popcount2(uint64 n);
+uint8 popcount(uint64 n);
+uint8 popcount2(uint64 n);
 
 __attribute__((constructor(1001)))
 void init(){
@@ -26,7 +26,7 @@ main(){
 }
 
 //returns number of set bits of n
-int 
+uint8
 popcount(uint64 n){
     return pc[(uint8)(n>>(0*8))]+pc[(uint8)(n>>(1*8))]+
            pc[(uint8)(n>>(2*8))]+pc[(uint8)(n>>(3*8))]+
@@ -34,9 +34,9 @@ popcount(uint64 n){
            pc[(uint8)(n>>(6*8))]+pc[(uint8)(n>>(7*8))];
 }
 
-int
+uint8
 popcount2(uint64 n){
-    int s=0;
+    uint8 s=0;
     while(n){
         s++;
         n=n&(n-1);
