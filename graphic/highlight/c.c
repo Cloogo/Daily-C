@@ -219,6 +219,9 @@ comment(){
             if(c==EOF){
                 close_app();
             }
+        }else{
+            ungetc(c,istream);
+            word();
         }
     }else{
         close_app();
